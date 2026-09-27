@@ -1,0 +1,162 @@
+raw_payload,error_reason,_ingestion_timestamp
+"{""id"": 493, ""transaction_id"": ""TXN-0194"", ""account_id"": ""ACC-1009"", ""transaction_date"": ""2024-02-19T21:50:15Z"", ""amount"": ""1481.14"", ""currency"": ""EUR"", ""transaction_type"": ""credit"", ""merchant_name"": ""Shell Gas"", ""merchant_category"": ""transportation"", ""status"": ""completed"", ""country_code"": ""US""}",Duplicate transaction detected (natural key collision): ACC-1009|2024-02-19T21:50:15Z|1481.14|EUR|credit|Shell Gas|transportation|completed|US,2026-09-27 17:16:48.450945
+"{""id"": 613, ""transaction_id"": ""TXN-0079"", ""account_id"": ""ACC-1003"", ""transaction_date"": ""2024-02-20T10:44:01Z"", ""amount"": ""43.05"", ""currency"": ""USD"", ""transaction_type"": ""debit"", ""merchant_name"": ""Sony Electronics"", ""merchant_category"": ""electronics"", ""status"": ""completed"", ""country_code"": ""US""}",Duplicate transaction detected (natural key collision): ACC-1003|2024-02-20T10:44:01Z|43.05|USD|debit|Sony Electronics|electronics|completed|US,2026-09-27 17:16:48.450945
+"{""id"": 492, ""transaction_id"": ""TXN-0347"", ""account_id"": ""ACC-1003"", ""transaction_date"": ""2024-02-20T17:45:00Z"", ""amount"": ""0.0"", ""currency"": ""EUR"", ""transaction_type"": ""Credit"", ""merchant_name"": ""Deutsche Bank"", ""merchant_category"": ""Finance"", ""status"": ""completed"", ""country_code"": ""EN""}","4 validation errors for TransactionRecord
+amount
+  Value error, Amount must be strictly > 0, got 0.0 [type=value_error, input_value='0.0', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+transaction_type
+  Value error, transaction_type must be lowercase debit/credit: Credit [type=value_error, input_value='Credit', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+merchant_category
+  Value error, merchant_category Finance not permitted [type=value_error, input_value='Finance', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+country_code
+  Value error, Invalid ISO 3166-1 alpha-2 country: EN [type=value_error, input_value='EN', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error",2026-09-27 17:16:48.450945
+"{""id"": 588, ""transaction_id"": ""TXN-0350"", ""account_id"": ""ACC-1020"", ""transaction_date"": ""2024-03-04T16:44:23Z"", ""amount"": ""345.74"", ""currency"": ""EUR"", ""transaction_type"": ""debit"", ""merchant_name"": ""IKEA"", ""merchant_category"": ""retail"", ""status"": ""completed"", ""country_code"": ""GB""}",Duplicate transaction detected (natural key collision): ACC-1020|2024-03-04T16:44:23Z|345.74|EUR|debit|IKEA|retail|completed|GB,2026-09-27 17:16:48.450945
+"{""id"": 530, ""transaction_id"": ""TXN-0319"", ""account_id"": ""ACC-1003"", ""transaction_date"": ""2024-03-04T21:17:09Z"", ""amount"": ""593.75"", ""currency"": ""GBP"", ""transaction_type"": ""debit"", ""merchant_name"": ""Spotify"", ""merchant_category"": ""entertainment"", ""status"": ""failed"", ""country_code"": ""US""}",Duplicate transaction detected (natural key collision): ACC-1003|2024-03-04T21:17:09Z|593.75|GBP|debit|Spotify|entertainment|failed|US,2026-09-27 17:16:48.450945
+"{""id"": 521, ""transaction_id"": ""TXN-0351"", ""account_id"": ""ACC-1011"", ""transaction_date"": ""2024-03-17T14:55:04Z"", ""amount"": ""28.47"", ""currency"": ""USD"", ""transaction_type"": ""debit"", ""merchant_name"": ""Sony Electronics"", ""merchant_category"": ""electronics"", ""status"": ""completed"", ""country_code"": ""US""}",Duplicate transaction detected (natural key collision): ACC-1011|2024-03-17T14:55:04Z|28.47|USD|debit|Sony Electronics|electronics|completed|US,2026-09-27 17:16:48.450945
+"{""id"": 648, ""transaction_id"": ""TXN-0346"", ""account_id"": ""ACC-1014"", ""transaction_date"": ""2024-04-15 09:30:00"", ""amount"": ""-127.5"", ""currency"": ""USD"", ""transaction_type"": ""debit"", ""merchant_name"": ""   "", ""merchant_category"": ""groceries"", ""status"": ""Completed"", ""country_code"": ""US""}","4 validation errors for TransactionRecord
+transaction_date
+  Value error, Date must be strict ISO 8601 UTC with Z suffix: 2024-04-15 09:30:00 [type=value_error, input_value='2024-04-15 09:30:00', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+amount
+  Value error, Amount must be strictly > 0, got -127.5 [type=value_error, input_value='-127.5', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+merchant_name
+  Value error, merchant_name cannot be empty or whitespace [type=value_error, input_value='   ', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+status
+  Value error, status must be lowercase completed/pending/failed/reversed: Completed [type=value_error, input_value='Completed', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error",2026-09-27 17:16:48.450945
+"{""id"": 579, ""transaction_id"": ""TXN-0345"", ""account_id"": ""ACC-1007"", ""transaction_date"": ""2024-11-31T14:22:00Z"", ""amount"": ""67.4"", ""currency"": ""GBP"", ""transaction_type"": ""debit"", ""merchant_name"": ""McDonald's"", ""merchant_category"": ""fast_food"", ""status"": ""completed"", ""country_code"": ""UK""}","3 validation errors for TransactionRecord
+transaction_date
+  Value error, day is out of range for month [type=value_error, input_value='2024-11-31T14:22:00Z', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+merchant_category
+  Value error, merchant_category fast_food not permitted [type=value_error, input_value='fast_food', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+country_code
+  Value error, Invalid ISO 3166-1 alpha-2 country: UK [type=value_error, input_value='UK', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error",2026-09-27 17:16:48.450945
+"{""id"": 637, ""transaction_id"": ""TXN-0252"", ""account_id"": ""ACC-1017"", ""transaction_date"": ""2024-03-30T21:01:36Z"", ""amount"": ""73.75"", ""currency"": ""GBP"", ""transaction_type"": ""debit"", ""merchant_name"": ""CVS Pharmacy"", ""merchant_category"": ""health"", ""status"": ""failed"", ""country_code"": ""US""}",Duplicate transaction detected (natural key collision): ACC-1017|2024-03-30T21:01:36Z|73.75|GBP|debit|CVS Pharmacy|health|failed|US,2026-09-27 17:31:36.019080
+"{""id"": 648, ""transaction_id"": ""TXN-0346"", ""account_id"": ""ACC-1014"", ""transaction_date"": ""2024-04-15 09:30:00"", ""amount"": ""-127.5"", ""currency"": ""USD"", ""transaction_type"": ""debit"", ""merchant_name"": ""   "", ""merchant_category"": ""groceries"", ""status"": ""Completed"", ""country_code"": ""US""}","4 validation errors for TransactionRecord
+transaction_date
+  Value error, Date must be strict ISO 8601 UTC with Z suffix: 2024-04-15 09:30:00 [type=value_error, input_value='2024-04-15 09:30:00', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+amount
+  Value error, Amount must be strictly > 0, got -127.5 [type=value_error, input_value='-127.5', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+merchant_name
+  Value error, merchant_name cannot be empty or whitespace [type=value_error, input_value='   ', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+status
+  Value error, status must be lowercase completed/pending/failed/reversed: Completed [type=value_error, input_value='Completed', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error",2026-09-27 17:31:36.019080
+"{""id"": 579, ""transaction_id"": ""TXN-0345"", ""account_id"": ""ACC-1007"", ""transaction_date"": ""2024-11-31T14:22:00Z"", ""amount"": ""67.4"", ""currency"": ""GBP"", ""transaction_type"": ""debit"", ""merchant_name"": ""McDonald's"", ""merchant_category"": ""fast_food"", ""status"": ""completed"", ""country_code"": ""UK""}","3 validation errors for TransactionRecord
+transaction_date
+  Value error, day is out of range for month [type=value_error, input_value='2024-11-31T14:22:00Z', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+merchant_category
+  Value error, merchant_category fast_food not permitted [type=value_error, input_value='fast_food', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+country_code
+  Value error, Invalid ISO 3166-1 alpha-2 country: UK [type=value_error, input_value='UK', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error",2026-09-27 17:31:36.019080
+"{""id"": 637, ""transaction_id"": ""TXN-0252"", ""account_id"": ""ACC-1017"", ""transaction_date"": ""2024-03-30T21:01:36Z"", ""amount"": ""73.75"", ""currency"": ""GBP"", ""transaction_type"": ""debit"", ""merchant_name"": ""CVS Pharmacy"", ""merchant_category"": ""health"", ""status"": ""failed"", ""country_code"": ""US""}",Duplicate transaction detected (natural key collision): ACC-1017|2024-03-30T21:01:36Z|73.75|GBP|debit|CVS Pharmacy|health|failed|US,2026-09-27 17:25:02.082702
+"{""id"": 648, ""transaction_id"": ""TXN-0346"", ""account_id"": ""ACC-1014"", ""transaction_date"": ""2024-04-15 09:30:00"", ""amount"": ""-127.5"", ""currency"": ""USD"", ""transaction_type"": ""debit"", ""merchant_name"": ""   "", ""merchant_category"": ""groceries"", ""status"": ""Completed"", ""country_code"": ""US""}","4 validation errors for TransactionRecord
+transaction_date
+  Value error, Date must be strict ISO 8601 UTC with Z suffix: 2024-04-15 09:30:00 [type=value_error, input_value='2024-04-15 09:30:00', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+amount
+  Value error, Amount must be strictly > 0, got -127.5 [type=value_error, input_value='-127.5', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+merchant_name
+  Value error, merchant_name cannot be empty or whitespace [type=value_error, input_value='   ', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+status
+  Value error, status must be lowercase completed/pending/failed/reversed: Completed [type=value_error, input_value='Completed', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error",2026-09-27 17:25:02.082702
+"{""id"": 579, ""transaction_id"": ""TXN-0345"", ""account_id"": ""ACC-1007"", ""transaction_date"": ""2024-11-31T14:22:00Z"", ""amount"": ""67.4"", ""currency"": ""GBP"", ""transaction_type"": ""debit"", ""merchant_name"": ""McDonald's"", ""merchant_category"": ""fast_food"", ""status"": ""completed"", ""country_code"": ""UK""}","3 validation errors for TransactionRecord
+transaction_date
+  Value error, day is out of range for month [type=value_error, input_value='2024-11-31T14:22:00Z', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+merchant_category
+  Value error, merchant_category fast_food not permitted [type=value_error, input_value='fast_food', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+country_code
+  Value error, Invalid ISO 3166-1 alpha-2 country: UK [type=value_error, input_value='UK', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error",2026-09-27 17:25:02.082702
+"{""id"": 637, ""transaction_id"": ""TXN-0252"", ""account_id"": ""ACC-1017"", ""transaction_date"": ""2024-03-30T21:01:36Z"", ""amount"": ""73.75"", ""currency"": ""GBP"", ""transaction_type"": ""debit"", ""merchant_name"": ""CVS Pharmacy"", ""merchant_category"": ""health"", ""status"": ""failed"", ""country_code"": ""US""}",Duplicate transaction detected (natural key collision): ACC-1017|2024-03-30T21:01:36Z|73.75|GBP|debit|CVS Pharmacy|health|failed|US,2026-09-27 17:29:38.574954
+"{""id"": 648, ""transaction_id"": ""TXN-0346"", ""account_id"": ""ACC-1014"", ""transaction_date"": ""2024-04-15 09:30:00"", ""amount"": ""-127.5"", ""currency"": ""USD"", ""transaction_type"": ""debit"", ""merchant_name"": ""   "", ""merchant_category"": ""groceries"", ""status"": ""Completed"", ""country_code"": ""US""}","4 validation errors for TransactionRecord
+transaction_date
+  Value error, Date must be strict ISO 8601 UTC with Z suffix: 2024-04-15 09:30:00 [type=value_error, input_value='2024-04-15 09:30:00', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+amount
+  Value error, Amount must be strictly > 0, got -127.5 [type=value_error, input_value='-127.5', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+merchant_name
+  Value error, merchant_name cannot be empty or whitespace [type=value_error, input_value='   ', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+status
+  Value error, status must be lowercase completed/pending/failed/reversed: Completed [type=value_error, input_value='Completed', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error",2026-09-27 17:29:38.574954
+"{""id"": 579, ""transaction_id"": ""TXN-0345"", ""account_id"": ""ACC-1007"", ""transaction_date"": ""2024-11-31T14:22:00Z"", ""amount"": ""67.4"", ""currency"": ""GBP"", ""transaction_type"": ""debit"", ""merchant_name"": ""McDonald's"", ""merchant_category"": ""fast_food"", ""status"": ""completed"", ""country_code"": ""UK""}","3 validation errors for TransactionRecord
+transaction_date
+  Value error, day is out of range for month [type=value_error, input_value='2024-11-31T14:22:00Z', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+merchant_category
+  Value error, merchant_category fast_food not permitted [type=value_error, input_value='fast_food', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+country_code
+  Value error, Invalid ISO 3166-1 alpha-2 country: UK [type=value_error, input_value='UK', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error",2026-09-27 17:29:38.574954
+"{""id"": 637, ""transaction_id"": ""TXN-0252"", ""account_id"": ""ACC-1017"", ""transaction_date"": ""2024-03-30T21:01:36Z"", ""amount"": ""73.75"", ""currency"": ""GBP"", ""transaction_type"": ""debit"", ""merchant_name"": ""CVS Pharmacy"", ""merchant_category"": ""health"", ""status"": ""failed"", ""country_code"": ""US""}",Duplicate transaction detected (natural key collision): ACC-1017|2024-03-30T21:01:36Z|73.75|GBP|debit|CVS Pharmacy|health|failed|US,2026-09-27 18:42:07.783471
+"{""id"": 648, ""transaction_id"": ""TXN-0346"", ""account_id"": ""ACC-1014"", ""transaction_date"": ""2024-04-15 09:30:00"", ""amount"": ""-127.5"", ""currency"": ""USD"", ""transaction_type"": ""debit"", ""merchant_name"": ""   "", ""merchant_category"": ""groceries"", ""status"": ""Completed"", ""country_code"": ""US""}","4 validation errors for TransactionRecord
+transaction_date
+  Value error, Date must be strict ISO 8601 UTC with Z suffix: 2024-04-15 09:30:00 [type=value_error, input_value='2024-04-15 09:30:00', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+amount
+  Value error, Amount must be strictly > 0, got -127.5 [type=value_error, input_value='-127.5', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+merchant_name
+  Value error, merchant_name cannot be empty or whitespace [type=value_error, input_value='   ', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+status
+  Value error, status must be lowercase completed/pending/failed/reversed: Completed [type=value_error, input_value='Completed', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error",2026-09-27 18:42:07.783471
+"{""id"": 579, ""transaction_id"": ""TXN-0345"", ""account_id"": ""ACC-1007"", ""transaction_date"": ""2024-11-31T14:22:00Z"", ""amount"": ""67.4"", ""currency"": ""GBP"", ""transaction_type"": ""debit"", ""merchant_name"": ""McDonald's"", ""merchant_category"": ""fast_food"", ""status"": ""completed"", ""country_code"": ""UK""}","3 validation errors for TransactionRecord
+transaction_date
+  Value error, day is out of range for month [type=value_error, input_value='2024-11-31T14:22:00Z', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+merchant_category
+  Value error, merchant_category fast_food not permitted [type=value_error, input_value='fast_food', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+country_code
+  Value error, Invalid ISO 3166-1 alpha-2 country: UK [type=value_error, input_value='UK', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error",2026-09-27 18:42:07.783471
+"{""id"": 637, ""transaction_id"": ""TXN-0252"", ""account_id"": ""ACC-1017"", ""transaction_date"": ""2024-03-30T21:01:36Z"", ""amount"": ""73.75"", ""currency"": ""GBP"", ""transaction_type"": ""debit"", ""merchant_name"": ""CVS Pharmacy"", ""merchant_category"": ""health"", ""status"": ""failed"", ""country_code"": ""US""}",Duplicate transaction detected (natural key collision): ACC-1017|2024-03-30T21:01:36Z|73.75|GBP|debit|CVS Pharmacy|health|failed|US,2026-09-27 17:22:27.431338
+"{""id"": 648, ""transaction_id"": ""TXN-0346"", ""account_id"": ""ACC-1014"", ""transaction_date"": ""2024-04-15 09:30:00"", ""amount"": ""-127.5"", ""currency"": ""USD"", ""transaction_type"": ""debit"", ""merchant_name"": ""   "", ""merchant_category"": ""groceries"", ""status"": ""Completed"", ""country_code"": ""US""}","4 validation errors for TransactionRecord
+transaction_date
+  Value error, Date must be strict ISO 8601 UTC with Z suffix: 2024-04-15 09:30:00 [type=value_error, input_value='2024-04-15 09:30:00', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+amount
+  Value error, Amount must be strictly > 0, got -127.5 [type=value_error, input_value='-127.5', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+merchant_name
+  Value error, merchant_name cannot be empty or whitespace [type=value_error, input_value='   ', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+status
+  Value error, status must be lowercase completed/pending/failed/reversed: Completed [type=value_error, input_value='Completed', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error",2026-09-27 17:22:27.431338
+"{""id"": 579, ""transaction_id"": ""TXN-0345"", ""account_id"": ""ACC-1007"", ""transaction_date"": ""2024-11-31T14:22:00Z"", ""amount"": ""67.4"", ""currency"": ""GBP"", ""transaction_type"": ""debit"", ""merchant_name"": ""McDonald's"", ""merchant_category"": ""fast_food"", ""status"": ""completed"", ""country_code"": ""UK""}","3 validation errors for TransactionRecord
+transaction_date
+  Value error, day is out of range for month [type=value_error, input_value='2024-11-31T14:22:00Z', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+merchant_category
+  Value error, merchant_category fast_food not permitted [type=value_error, input_value='fast_food', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+country_code
+  Value error, Invalid ISO 3166-1 alpha-2 country: UK [type=value_error, input_value='UK', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error",2026-09-27 17:22:27.431338
