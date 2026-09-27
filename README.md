@@ -65,6 +65,8 @@ The platform follows a **Medallion Data Architecture (Bronze -> Quarantine / Sil
 ├── ingest_transactions.py
 ├── transform_summary.py
 ├── run_pipeline.py
+├── docs/
+│   ├── product_platform_note.md
 ├── outputs/
 │   ├── daily_account_summary_sample.csv
 │   └── quarantine_sample.csv
